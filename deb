@@ -1,0 +1,36 @@
+#!/bin/bash
+VERSION=$(grep -o define.HANGOUTS_PLUGIN_VERSION.* libhangouts.h|cut -d '"' -f 2)
+CMD=$1
+
+USAGE="Simple Debian package build script. Usage:
+
+  deb <command>
+
+Commands:
+
+  bump        Updates (or creates) the Debian changelog with the version from
+              source, and opens the default editor to amend the description.
+  minor-bump  Increments the existing Debian changelog version with a minor
+              bump and opens the default editor to amend the description.
+  build-test  Builds the Debian package without GPG signing, for testing.
+  build       Build the Debian package."
+
+if [ -z $CMD ]; then
+    echo "$USAGE"
+    exit 1
+elif [ "$CMD" = "bump" ]; then
+    if [ ! -e debian/changelog ]; then
+        CREATE="--package=pidgin-hangouts --create"
+    fi
+    debchange $CREATE --newversion=$VERSION --distribution unstable --upstream
+    if [ "$?" -eq 25 ]; then
+        echo "Maybe you need to do a minor release: deb minor-bump"
+        exit 2
+    fi
+elif [ "$CMD" = "minor-bump" ]; then
+    debchange --increment --distribution unstable --upstream
+elif [ "$CMD" = "build-test" ]; then
+    dpkg-buildpackage -rfakeroot -us -uc -b -tc
+elif [ "$CMD" = "build" ]; then
+    dpkg-buildpackage -rfakeroot -b -tc
+fi

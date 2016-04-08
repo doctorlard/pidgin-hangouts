@@ -1,0 +1,28 @@
+Source: pidgin-hangouts
+Section: net
+Priority: extra
+Maintainer: Jonathan Harker <jon@jon.geek.nz>
+Build-Depends: debhelper (>= 7.0.50~), autotools-dev,
+ libglib2.0-dev (>= 2.16.0), pidgin-dev (>= 2.6.0),
+ libjson-glib-dev (>= 1.0.2), libprotobuf-c-dev (>= 1.0.2),
+ libnss3-dev, zlib1g-dev
+Standards-Version: 3.9.6
+Homepage: https://bitbucket.org/EionRobb/purple-hangouts
+Vcs-Hg: https://bitbucket.org/EionRobb/purple-hangouts
+Vcs-Browser: https://bitbucket.org/EionRobb/purple-hangouts
+
+Package: pidgin-hangouts
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, pidgin (>= 2.6.0),
+ libjson-glib-1.0-0 (>= 1.0.2), libprotobuf-c1 (>= 1.0.2),
+ libnss3, zlib1g
+Description: Pidgin plugin for Google Hangouts
+ A replacement prpl for Hangouts in Pidgin/libpurple to support the
+ proprietary protocol that Google uses for its Hangouts service. So far
+ it supports all the fun things that aren't part of the XMPP interface,
+ such as Group Chats, synchronised history between devices and SMS
+ support via Google Voice.
+ .
+ This plugin is written by Eion Robb and Mike 'Maiku' Ruprecht. Heavily
+ inspired by the hangups library by Tom Dryer (et. al.) using code from
+ Nakul Gulati and protobufs from Darryl Pogue.
