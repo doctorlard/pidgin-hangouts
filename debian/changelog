@@ -1,0 +1,41 @@
+pidgin-hangouts (0.1-6) UNRELEASED; urgency=medium
+
+  * Latest version from hg bitbucket default branch (2018-01-11).
+
+ -- Jonathan Harker <jonathan@catalyst.net.nz>  Thu, 11 Jan 2018 13:01:29 +1300
+
+pidgin-hangouts (0.1-5) unstable; urgency=medium
+
+  * Latest version from hg bitbucket default branch (2017-04-27).
+
+ -- Jonathan Harker <jonathan@catalyst.net.nz>  Tue, 30 May 2017 16:30:29 +1200
+
+pidgin-hangouts (0.1-4) unstable; urgency=medium
+
+  * Latest version from hg bitbucket default branch (2017-04-12).
+
+ -- Jonathan Harker <jonathan@catalyst.net.nz>  Wed, 12 Apr 2017 11:04:22 +1200
+
+pidgin-hangouts (0.1-3) unstable; urgency=medium
+
+  * Latest version from hg bitbucket default branch (2016-12-23).
+
+ -- Jonathan Harker <jonathan@catalyst.net.nz>  Wed, 18 Jan 2017 23:22:25 +1300
+
+pidgin-hangouts (0.1-2) unstable; urgency=medium
+
+  * Latest version from hg bitbucket default branch (2016-10-05).
+
+ -- Jonathan Harker <jonathan@catalyst.net.nz>  Wed, 05 Oct 2016 11:05:30 +1300
+
+pidgin-hangouts (0.1-1) unstable; urgency=medium
+
+  * Latest version from hg bitbucket default branch.
+
+ -- Jonathan Harker <jonathan@catalyst.net.nz>  Mon, 05 Sep 2016 14:34:10 +1200
+
+pidgin-hangouts (0.1) unstable; urgency=medium
+
+  * Initial packaging attempt.
+
+ -- Jonathan Harker <jon@jon.geek.nz>  Sat, 09 Apr 2016 03:39:46 +1200
